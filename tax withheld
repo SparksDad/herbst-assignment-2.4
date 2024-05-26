@@ -1,0 +1,34 @@
+salary = 1250.0 
+numDependents = 2
+stateTax = 0 
+federalTax = 0 
+dependentDeduction = 0
+totalWithholding = 0 
+takeHomePay = 0 
+
+
+# input statements
+salary = float(input())
+numDependents = float(input())
+
+# calculate stateTax here. 
+stateTax = salary * 0.065
+print("stateTax: $" + str(stateTax))
+
+# calculate federalTax here.
+federalTax = salary * 0.28
+print("federalTax: $" + str(federalTax))
+
+# calculate dependentDeduction here.
+dependentDeduction = (salary * 0.025) * numDependents
+print("dependentDeduction: $" + str(dependentDeduction))
+
+# calculate totalWithholding here.
+totalWithholding = stateTax + federalTax + dependentDeduction
+
+# calculate takeHomePay here.  
+takeHomePay = salary - totalWithholding
+
+# output statements
+print("Salary: $" + str(salary))
+print("Take Home Pay: $" + str(takeHomePay))
